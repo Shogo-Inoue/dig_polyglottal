@@ -1,0 +1,15 @@
+<%# <h1>New Article!!!</h1>
+<%= form_with model: @noteText do |form| %>
+  <div>
+    <%= form.submit %>
+  </div>
+
+  <div>
+    <%= form.label :noteText %><br>
+    <%= form.text_area :noteText %>
+    <% @noteText.errors.full_messages_for(:noteText).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+<% end %> %>

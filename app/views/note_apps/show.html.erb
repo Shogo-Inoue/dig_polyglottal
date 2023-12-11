@@ -1,0 +1,15 @@
+<p><%= @noteText.noteText %></p>
+
+<p><%= @noteText.created_at%></p>
+
+<p><%= @noteText.updated_at%></p>
+
+
+<ul>
+  <li><%= link_to "Edit", edit_note_app_path(@noteText) %></li>
+
+   <li><%= link_to "Destroy", note_app_path(@noteText), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

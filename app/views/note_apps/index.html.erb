@@ -1,0 +1,22 @@
+
+<header>
+<h1>DIG Note by Rails!</h1>
+</header>
+<main>
+<article class= "notecard">
+<h1>Note Card</h1>
+<ul>
+  <% @noteTexts.each do |noteText| %>
+    <li>
+      <%= link_to noteText.noteText, noteText %><br>
+      <%= noteText.updated_at%>
+    </li>
+  <% end %>
+</ul>
+</article>
+
+<article class = "note_edit">
+<%= link_to "New Notecard", new_note_app_path %>
+</article>
+
+</main>
